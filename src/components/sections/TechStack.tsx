@@ -8,7 +8,7 @@ const TechStack = () => {
     {
       title: "Frontend",
       icon: Globe,
-      color: "from-blue-500 to-cyan-500",
+      color: "from-white to-gray-300",
       technologies: [
         "HTML5 - 70%",
         "CSS3 - 65%",
@@ -21,7 +21,7 @@ const TechStack = () => {
     {
       title: "Backend",
       icon: Server,
-      color: "from-green-500 to-emerald-500",
+      color: "from-gray-300 to-white",
       technologies: [
         "Node.js - 35%",
         "Express - 30%",
@@ -34,7 +34,7 @@ const TechStack = () => {
     {
       title: "Database",
       icon: Database,
-      color: "from-purple-500 to-violet-500",
+      color: "from-white to-gray-400",
       technologies: [
         "MongoDB - 30%",
         "PostgreSQL - 20%",
@@ -47,7 +47,7 @@ const TechStack = () => {
     {
       title: "Tools & Others",
       icon: Zap,
-      color: "from-orange-500 to-red-500",
+      color: "from-gray-400 to-white",
       technologies: [
         "Git - 60%",
         "GitHub - 65%",
@@ -114,7 +114,7 @@ const TechStack = () => {
                 whileHover={{ scale: 1.1 }}
               >
                 <div className={`p-1 sm:p-2 rounded-md sm:rounded-lg bg-gradient-to-br ${category.color}`}>
-                  <category.icon className="w-3 h-3 sm:w-5 sm:h-5 text-white" />
+                  <category.icon className="w-3 h-3 sm:w-5 sm:h-5 text-black" />
                 </div>
                 <h4 className="text-xs sm:text-sm font-medium text-white">{category.title}</h4>
               </motion.div>
@@ -160,7 +160,7 @@ const TechStack = () => {
           }}
           className="inline-flex items-center gap-1 sm:gap-1.5 px-2 sm:px-3 py-1 bg-white/5 backdrop-blur-sm border border-white/10 rounded-full"
         >
-          <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-green-400 rounded-full animate-pulse" />
+          <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-white rounded-full animate-pulse" />
           <span className="text-xs sm:text-sm text-white/80">En constante aprendizaje</span>
         </motion.div>
       </motion.div>

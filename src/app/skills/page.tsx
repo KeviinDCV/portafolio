@@ -8,14 +8,14 @@ import CustomCursor from '@/components/CustomCursor'
 
 export default function Skills() {
   return (
-    <main className="relative h-screen overflow-hidden cursor-none">
+    <main className="relative min-h-screen overflow-x-hidden">
       <CustomCursor />
       <Navigation />
-      
+
 
 
       {/* Skills Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center py-20 sm:py-0">
         {/* Animated background gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black">
           <div className="absolute inset-0 opacity-20">
@@ -33,7 +33,7 @@ export default function Skills() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto pt-20 sm:pt-0"
+          className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto py-8 sm:py-0"
         >
           {/* Title */}
           <motion.h1

@@ -19,7 +19,7 @@ const Navigation = () => {
 
   const navItems = [
     { name: 'Inicio', href: '/' },
-    { name: 'Sobre mí', href: '#about' },
+    { name: 'Sobre mí', href: '/about' },
     { name: 'Proyectos', href: '#projects' },
     { name: 'Habilidades', href: '/skills' },
     { name: 'Contacto', href: '#contact' },

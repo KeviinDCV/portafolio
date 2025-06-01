@@ -36,8 +36,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="dark">
-      <body className={`${inter.className} bg-black text-white antialiased h-screen overflow-hidden`}>
-        <div className="h-screen bg-gradient-to-br from-black via-gray-900 to-black">
+      <body className={`${inter.className} bg-black text-white antialiased min-h-screen overflow-x-hidden`}>
+        <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black">
           {children}
         </div>
       </body>

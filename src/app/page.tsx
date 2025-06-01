@@ -8,7 +8,7 @@ import CustomCursor from '@/components/CustomCursor'
 
 export default function Home() {
   return (
-    <main className="relative h-screen overflow-hidden cursor-none">
+    <main className="relative h-screen overflow-hidden">
       <CustomCursor />
       <Navigation />
       <Hero />
