@@ -201,35 +201,7 @@ export default function About() {
               <span className="text-xs sm:text-sm text-white/80">Listo para nuevos desafíos</span>
             </motion.div>
 
-            {/* Scroll indicator for mobile */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 2.0 }}
-              className="mt-8 sm:hidden flex flex-col items-center"
-            >
-              <motion.div
-                animate={{ y: [0, 8, 0] }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-                className="text-white/40 text-xs mb-2"
-              >
-                Desliza para explorar más
-              </motion.div>
-              <motion.div
-                animate={{ y: [0, 8, 0] }}
-                transition={{
-                  duration: 1.5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                  delay: 0.2
-                }}
-                className="w-0.5 h-6 bg-white/30 rounded-full"
-              />
-            </motion.div>
+
           </motion.div>
         </motion.div>
 
