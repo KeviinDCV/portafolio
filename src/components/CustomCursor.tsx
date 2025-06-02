@@ -7,8 +7,23 @@ const CustomCursor = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [isHovering, setIsHovering] = useState(false)
   const [particles, setParticles] = useState<Array<{id: number, x: number, y: number, opacity: number}>>([])
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
+    // Detectar si es dispositivo móvil
+    const checkIsMobile = () => {
+      setIsMobile(window.innerWidth < 768 || 'ontouchstart' in window)
+    }
+
+    checkIsMobile()
+    window.addEventListener('resize', checkIsMobile)
+
+    return () => window.removeEventListener('resize', checkIsMobile)
+  }, [])
+
+  useEffect(() => {
+    // No agregar event listeners en móviles
+    if (isMobile) return
     let particleId = 0
 
     const handleMouseMove = (e: MouseEvent) => {
@@ -48,12 +63,15 @@ const CustomCursor = () => {
       document.removeEventListener('mouseenter', handleMouseEnter, true)
       document.removeEventListener('mouseleave', handleMouseLeave, true)
     }
-  }, [])
+  }, [isMobile])
 
   // Fade out particles
   useEffect(() => {
+    // No ejecutar en móviles
+    if (isMobile) return
+
     const interval = setInterval(() => {
-      setParticles(prev => 
+      setParticles(prev =>
         prev.map(particle => ({
           ...particle,
           opacity: particle.opacity - 0.1
@@ -62,7 +80,10 @@ const CustomCursor = () => {
     }, 50)
 
     return () => clearInterval(interval)
-  }, [])
+  }, [isMobile])
+
+  // No renderizar cursor en móviles
+  if (isMobile) return null
 
   return (
     <>

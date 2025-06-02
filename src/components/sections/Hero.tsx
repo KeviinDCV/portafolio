@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Download, ArrowRight } from 'lucide-react'
+import { Instagram, Facebook, MessageCircle, Download, ArrowRight } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import MagneticButton from '@/components/MagneticButton'
@@ -41,9 +41,9 @@ const Hero = () => {
   }
 
   const socialLinks = [
-    { icon: Github, href: '#', label: 'GitHub' },
-    { icon: Linkedin, href: '#', label: 'LinkedIn' },
-    { icon: Mail, href: '#', label: 'Email' },
+    { icon: Instagram, href: '#', label: 'Instagram' },
+    { icon: Facebook, href: '#', label: 'Facebook' },
+    { icon: MessageCircle, href: '#', label: 'WhatsApp' },
   ]
 
   return (
